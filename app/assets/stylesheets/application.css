@@ -23,5 +23,11 @@
         color: green;
     }
     a:active {
-        color: green
+        color: green;
+    }
+
+    .main-links {
+        margin-top: 200px;
+        padding: 30px;
+        text-align: center;
     }

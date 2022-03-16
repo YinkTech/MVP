@@ -1,1 +1,21 @@
-<h1>helo</h1>
+  <% if model_signed_in? %>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <% else %>
+
+        <div class="btn-group main-links d-flex justify-content-center" role="group" aria-label="Third group">
+             <%= link_to "Sign In", new_model_session_path, class:"btn btn-info text-light fs-2" %>
+             <%= link_to "Sign Up", new_model_registration_path, class:"btn btn-warning text-light fs-2" %>
+        </div>
+    <% end %>
