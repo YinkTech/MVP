@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+
+    .primarycolor {
+        background: rgb(78, 152, 187);
+        color: #fff;
+    }
+    
+    a:hover {
+        color: green;
+    }
+    a:active {
+        color: green
+    }
