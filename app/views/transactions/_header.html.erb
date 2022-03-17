@@ -34,16 +34,23 @@
   <div class="offcanvas-body text-center text-light">
     <div>
 
-
     <% if model_signed_in? %>
-    <%= link_to "Edit Profile", edit_model_registration_path, class:"nav-link text-light fs-2" %>
+    
+        <%= link_to "All Transactions", root_path, class:"xactive nav-link text-light box-arrow-in-right fs-5" %>
+        <hr>
+        <a class="nav-link text-light box-arrow-in-right fs-5" href="#"> Group Transactions</a>
+        <hr>
+        <a class="nav-link text-light box-arrow-in-right fs-5" href="#"> Other Transactions</a>
+        <hr>
+          
+    <%= link_to "Edit Profile", edit_model_registration_path, class:"nav-link text-light fs-4" %>
     <hr >
-    <%= button_to "Sign Out", destroy_model_session_path, method: :delete, class:"nav-link text-light btn fs-2 mx-auto" %>   
+    <%= button_to "Sign Out", destroy_model_session_path, method: :delete, class:"nav-link text-light btn fs-4 mx-auto" %>   
 
     <% else %>
-        <%= link_to "Sign In", new_model_session_path, class:"nav-link text-light fs-2" %>
+        <%= link_to "Sign In", new_model_session_path, class:"nav-link text-light fs-5" %>
         <hr >
-        <%= link_to "Sign Up", new_model_registration_path, class:"nav-link text-light box-arrow-in-right fs-2" %>   
+        <%= link_to "Sign Up", new_model_registration_path, class:"nav-link text-light box-arrow-in-right fs-5" %>   
     <% end %>
 
     </div>
