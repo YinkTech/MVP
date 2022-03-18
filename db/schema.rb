@@ -10,7 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_03_16_123005) do
+ActiveRecord::Schema[7.0].define(version: 2022_03_18_123724) do
+  create_table "groupeds", force: :cascade do |t|
+    t.text "company_name"
+    t.string "products_name"
+    t.string "quantity"
+    t.string "amount"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "groups", force: :cascade do |t|
+    t.text "company_name"
+    t.string "products_name"
+    t.string "quantity"
+    t.string "amount"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "models", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
