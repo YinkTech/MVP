@@ -3,7 +3,7 @@
     <a class="nav-link text-light" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
       <i class="bi bi-grid-3x3-gap-fill fs-4"></i>
     </a>
-    <%= link_to "Account Control", root_path, class:"navbar-brand text-warning text-center mx-md-5" %>
+    <%= link_to "Account Control", root_path, class:"navbar-brand text-warning" %>
     <button class="navbar-toggler d-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -11,12 +11,12 @@
       <div class="navbar-nav text-light">
       <% if model_signed_in? %>
         <%= link_to "All Transactions", root_path, class:"nav-link active text-light" %>
-        <a class="nav-link text-light" href="#"> Group Transactions</a>
-        <a class="nav-link text-light" href="#"> External Transactions</a>
-        
-
+        <%= link_to "Group Transactions", groups_path, class:"nav-link text-light"  %>
+        <%= link_to "External Transactions", externals_path, class:"nav-link text-light"  %>
       </div>
     </div>
+
+ 
     <%= link_to "Create Group", new_group_path, class:"nav-link btn-info text-light rounded-3" %>
           <% else %>
         <%= link_to "Sign In", new_model_session_path, class:"nav-link text-light" %>
