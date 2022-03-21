@@ -3,33 +3,6 @@
   <div id="groups">
   
 
-  <table class="table table-hover">
-    <thead>
-      <tr class="text-center">
-        <th scope="col">Time created</th>
-        <th scope="col">Company name</th>
-        <th scope="col">Products Name</th>
-        <th scope="col">Quantity</th>
-        <th scope="col">Amount</th>
-        <th scope="col"></th>
-      </tr>
-    </thead>
-      <tbody>
-        <% @groups.each do |group| %>
-          <tr class="text-center">
-            <th scope="row"><%= group.created_at %></th>
-            <td><%= group.company_name %></td>
-            <td><%= group.products_name %></td>
-            <td> <%= group.quantity %></td>
-            <td><%= group.amount %></td>
-            <td><%= link_to "Show this group", group, class:"btn btn-outline-info" %></td>
-          </tr>
-        <% end %>
-      </tbody>
-  </table>
-</div>
-
-
 
 
 
