@@ -21,7 +21,9 @@ class ExternalsController < ApplicationController
 
   # POST /externals or /externals.json
   def create
-    @external = External.new(external_params)
+    @groups = Group.find(params[:group_id])
+  
+    @external = current_user.externals.new(group_id: group_id, user_id: current_user.id)
 
     respond_to do |format|
       if @external.save

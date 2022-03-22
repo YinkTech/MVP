@@ -1,3 +1,4 @@
 class Group < ApplicationRecord
-    has_one_attached :image
+    has_many externals:
+    has_many users:, through: :externals
 end
